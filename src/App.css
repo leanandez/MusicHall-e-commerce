@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+
+.cartWidget{
+  color: grey;
+  font-size: 50px;
+  padding-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cartWidget:hover{
+  color: brown;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.detailCard{
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: solid black 2px;
+  height: 80vh;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.detailCard_info{
+  padding: 15em;;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detailImg{
+  height: 70vh;
+}
+
+
+.productos{
+  display: flex;
+}
+
+.itemCard{
+  border: 2px solid grey;
+}
+.itemCard:hover{
+ border: 2px solid black
+}
+
+.itemImg{
+  max-height: 50%;
+  max-width: 50%;
+  
 }
