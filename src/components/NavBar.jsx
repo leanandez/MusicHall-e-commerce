@@ -1,38 +1,33 @@
 import CartWidget from "./CartWidget.jsx"
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { LinkContainer} from "react-router-bootstrap"
-import {Link} from "react-router-dom"
 
-function NavBar(){
-    return (
-        <>
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand as={Link} to="/">MusicHall</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/category/guitars">Guitars</Nav.Link>
-                <Nav.Link as={Link} to="/category/basses">Basses</Nav.Link>
-                <Nav.Link as={Link} to="/category/drums">Drums</Nav.Link>
-              </Nav> 
-              <Nav className="header__cart"><CartWidget/></Nav>
-              </Container>
-      </Navbar>
-      </>
-      );
-    }
-     {/* <header className="header">
-         <nav className="header__title"><h1>MusicHall</h1></nav>
-         <nav className="header-nav">
-         <a href="">Guitarras</a>
-         <a href="">Bajos</a>
-         <a href="">Baterias</a>
-         </nav>
-         <nav className="header__cart"><CartWidget/></nav>
-     </header> */}
+
+import { Link } from "react-router-dom"
+import { useCartContext } from "../context/cartContext.jsx";
+
+function NavBar() {
+  const { cart, getCartQty } = useCartContext();
+ 
+
+
+
+  return (
+    <nav className="navBar">
+      <Link to="/"><div className="navBrand">MusicHall</div></Link>
+      <div className="navCategories">
+        <Link to="/category/guitar">Guitars</Link>
+        <Link to="/category/bass">Basses</Link>
+        <Link to="/category/drum">Drums</Link>
+      </div>
+      <Link to="/cart"><div className="navCart"><CartWidget number={getCartQty()} /></div></Link>
+
+    </nav>
+
+
+
+  );
+}
+
 
 
 export default NavBar;

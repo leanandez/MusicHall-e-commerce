@@ -1,7 +1,13 @@
-import {BsFillCartFill} from "react-icons/bs";
+import { BsFillCartFill } from "react-icons/bs";
 
-function CartWidget(){
-    return <a href="" className="cartWidget"><BsFillCartFill/></a>
+function CartWidget({ number }) {
+    return <div className="cart">
+        <div className="cartWidget"><BsFillCartFill /></div>
+        <div className="cartNumber">
+            {number}
+        </div>
+
+    </div>
 
 }
 

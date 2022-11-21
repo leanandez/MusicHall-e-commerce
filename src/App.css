@@ -1,48 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@700&display=swap');
 
-.cartWidget{
-  color: grey;
-  font-size: 50px;
+
+/* NAVBAR */
+
+.App {
+  width: 80vw;
+  margin: auto;
+}
+
+.navBar {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  font-family: 'Noto Serif Oriya', serif;
+}
+
+.navBrand {
+  color: black;
+  position: relative;
+  margin-left: 5rem;
+  font-size: 25px;
+}
+
+.navCategories {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.navCart {
+  float: right;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+
+
+
+
+
+/* CartWidget */
+.cart {
+  display: flex
+}
+
+
+.cartWidget {
+  color: whitesmoke;
+  font-size: 40px;
   padding-bottom: 10px;
 }
 
-.cartWidget:hover{
-  color: brown;
-  
+.cartWidget:hover {
+  color: antiquewhite;
 }
 
 
-.detailCard{
+.cartNumber {
+  padding: 2px 9px 0px 9px;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 1px grey solid;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   justify-content: center;
-  border: solid black 2px;
-  height: 80vh;
+  align-items: center;
+  font-size: 20px;
+}
+
+
+/* ItemDetailContainer */
+
+.itemDetailCointainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: auto;
+}
+
+.detailCard_title {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 2rem;
+}
+
+.detailCard_container {
+  display: flex;
+  height: 70vh;
   width: 100%;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  justify-content: space-around;
+
 }
 
 .detailCard_info{
-  padding: 15em;;
+  padding: 0 0 5rem 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 50%;
 }
 
-.detailImg{
-  height: 70vh;
+.detailCard_price{
+  font-size: 40px;
+  margin-bottom: 2rem;
 }
-
-
-.productos{
-  display: flex;
-}
-
-.itemCard{
-  border: 2px solid grey;
-}
-.itemCard:hover{
- border: 2px solid black
-}
-
-.itemImg{
-  max-height: 50%;
+.detaiCard_img {
   max-width: 50%;
+  max-height: 50%;
+}
+
+.counter{
+  display: flex;
+  align-items: center;
+}
+.counterQty{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 3rem;
+}
+
+.counter p{
+  font-size: 20px;
+ 
+}
+.counter button{
+  margin-left: 2rem;
+  height: 3rem;
+  width: 12rem;
+  background-color: black;
+  color: white;
+ 
+}
+.counter input{
+  text-align: center;
+  font-size: 20px;
+  border: none;
+
+}
+.detailCard_stock{
+  padding-left: 5rem;
+}
+.detailCard_description{
+  width: 60%;
   
+}
+/* Para quitarle flechas de HTML al input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+
+
+
+/* itemListContainer */
+.itemListContainer {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* ITEM */
+
+.itemCard {
+  border: 1px solid grey;
+  border-radius: 4px;
+  display: grid;
+  grid-template-rows: 215px 6rem;
+  grid-row-gap: 1rem;
+  width: 17rem;
+  padding: 1rem;
+  margin: 1rem;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1rem;
+}
+
+
+.itemTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.itemPrice {
+  font-size: 18px;
+  color: red;
+  font-weight: bold;
+}
+
+.itemDescription {
+  width: 15rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+
+}
+
+.itemCard:hover {
+  border: 2px solid black
+}
+
+.itemImg {
+
+  padding-left: 2rem;
+}
+
+
+
+/* CART */
+.cartTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height:2;
+  
+}
+.cartTitle p{
+  margin-top: 2rem;
+  font-size: 40px;
+  font-family: 'Noto Serif Oriya', serif;
+}
+.cartConditional p{
+  margin-top: 5rem;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cartCard {
+  height: 5em;
+  width: 80vw;
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  font-size: 20px;
+  margin: 3rem 0;
+
+}
+
+.carCard .btn {
+  background-color: none;
+  justify-self: end;
+}
+
+.cartCard p {
+  align-self: center;
+  justify-self: center;
+}
+
+.cardImg {
+  height: 5em;
+}
+
+.cartResume{
+  margin: 8rem auto;
+  background-color: aquamarine;
+  padding: 2rem;
+  width: 50%;
+  border-radius: 2rem;
+}
+.cartTotal p{
+  font-size: 35px;
+  text-align: end;
+  font-family:'Noto Serif Oriya', serif;
+
+}
+.cartForm{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  
+}
+.cartForm input{
+  border-radius: 4px;
+  width: 90%;
+  margin: auto;
+}
+
+.cartForm button{
+  width: 50%;
+  height: 3rem;
+  margin: 2rem auto;
+  background-color: rgba(137, 43, 226, 0.81);
+  color: white;
+  font-weight: bold;
+
+}
+
+.cartForm button:disabled{
+  background-color: grey;
+  color: rgb(177, 177, 177);
+}
+
+
+.order{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2rem;
+  padding: 1rem 0;
+  background-color: rgb(75, 181, 67);
+  border-radius: 4rem;
+  height: 25vh;
+  width: 50vw;
+  margin: 3rem auto;
+  font-size: 25px;
+  color: aquamarine;
+}
+
+
+
+
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
 }

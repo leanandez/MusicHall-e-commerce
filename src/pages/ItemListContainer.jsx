@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom"
 import { useEffect, useState } from "react";
 import Item from "../components/Item";
 
+
 function ItemListContainer(){
         const {categoryId} = useParams();
         const [productos, setProductos] = useState([]);
@@ -16,7 +17,7 @@ function ItemListContainer(){
         
 
     return (
-        <div className="productos">
+        <div className="itemListContainer">
             
             {productos.map((producto) =>{
                 return (
@@ -26,6 +27,7 @@ function ItemListContainer(){
                      title={producto.title}
                      price={producto.price}
                      img={producto.img}
+                     description={producto.description}
                  />
            ) })}
             
