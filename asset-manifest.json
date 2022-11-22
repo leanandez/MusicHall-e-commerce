@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MusicHall-e-commerce/static/css/main.879d0fa6.css",
+    "main.js": "/MusicHall-e-commerce/static/js/main.2fa8f15e.js",
+    "static/js/787.a6556e14.chunk.js": "/MusicHall-e-commerce/static/js/787.a6556e14.chunk.js",
+    "index.html": "/MusicHall-e-commerce/index.html",
+    "main.879d0fa6.css.map": "/MusicHall-e-commerce/static/css/main.879d0fa6.css.map",
+    "main.2fa8f15e.js.map": "/MusicHall-e-commerce/static/js/main.2fa8f15e.js.map",
+    "787.a6556e14.chunk.js.map": "/MusicHall-e-commerce/static/js/787.a6556e14.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.879d0fa6.css",
+    "static/js/main.2fa8f15e.js"
+  ]
+}
