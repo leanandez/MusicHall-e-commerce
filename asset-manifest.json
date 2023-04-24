@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/MusicHall-e-commerce/static/css/main.879d0fa6.css",
-    "main.js": "/MusicHall-e-commerce/static/js/main.3e8b5d2e.js",
-    "static/js/787.a6556e14.chunk.js": "/MusicHall-e-commerce/static/js/787.a6556e14.chunk.js",
-    "index.html": "/MusicHall-e-commerce/index.html",
-    "main.879d0fa6.css.map": "/MusicHall-e-commerce/static/css/main.879d0fa6.css.map",
-    "main.3e8b5d2e.js.map": "/MusicHall-e-commerce/static/js/main.3e8b5d2e.js.map",
-    "787.a6556e14.chunk.js.map": "/MusicHall-e-commerce/static/js/787.a6556e14.chunk.js.map"
+    "main.css": "/static/css/main.117457b1.css",
+    "main.js": "/static/js/main.c5ba23e1.js",
+    "static/js/787.a6556e14.chunk.js": "/static/js/787.a6556e14.chunk.js",
+    "index.html": "/index.html",
+    "main.117457b1.css.map": "/static/css/main.117457b1.css.map",
+    "main.c5ba23e1.js.map": "/static/js/main.c5ba23e1.js.map",
+    "787.a6556e14.chunk.js.map": "/static/js/787.a6556e14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.879d0fa6.css",
-    "static/js/main.3e8b5d2e.js"
+    "static/css/main.117457b1.css",
+    "static/js/main.c5ba23e1.js"
   ]
 }
