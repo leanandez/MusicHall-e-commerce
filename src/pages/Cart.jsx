@@ -7,8 +7,8 @@ import { useEffect, useState } from "react"
 
 
 export const Cart = () => {
-    
-    const { getTotalPrice, emptyCart,  removeProduct } = useCartContext();
+
+    const { getTotalPrice, emptyCart, removeProduct } = useCartContext();
     const { cart } = useCartContext();
 
 
@@ -54,7 +54,7 @@ export const Cart = () => {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
     }
 
-    function validateSecondEmail(){
+    function validateSecondEmail() {
         const validEmail = (secondEmail === email) ? true : false
         return validEmail
     }
@@ -70,7 +70,7 @@ export const Cart = () => {
 
 
 
-    
+
 
 
     return (
@@ -88,7 +88,7 @@ export const Cart = () => {
             }
 
             <div className="cartConditional">
-                <Link to="/">{cart.length == 0 && <p><BsArrowLeftCircleFill /> GO BACK TO STORE</p>}</Link>
+                <Link to="/MusicHall-e-commerce">{cart.length == 0 && <p><BsArrowLeftCircleFill /> GO BACK TO STORE</p>}</Link>
             </div>
 
 
@@ -98,10 +98,24 @@ export const Cart = () => {
                     <div className="cartCard" key={product.id}>
                         <button className="btn" onClick={() => { removeProduct(product) }}>X</button>
                         <img src={product.img} className="cardImg"></img>
-                        <p>{product.title}</p>
-                        <p>${product.price}</p>
-                        <p>{product.qty}</p>
-                        <p>$ {product.price * product.qty}</p>
+                        <p className="productTitle">{product.title}</p>
+                        <div className="cartDetail">
+                            <div className="elements">
+                                <h4>Price</h4>
+                                <p>${product.price}</p>
+                            </div>
+                            <div className="elements">
+                                <h4>Quantity</h4>
+                                <p>{product.qty}</p>
+                            </div>
+                            <div className="elements">
+                                <h4>Total</h4>
+                                <p>$ {product.price * product.qty}</p>
+                            </div>
+
+
+                        </div>
+
                     </div>
 
 
@@ -112,41 +126,41 @@ export const Cart = () => {
 
 
 
- {cart.length != 0 &&
- 
-<div className="cartResume">
+            {cart.length != 0 &&
 
-    <div className="cartTotal">
-        <p>Total: $ {getTotalPrice()}</p>
-    </div>
+                <div className="cartResume">
 
-    <div className="cartForm">
-        <p>To finish your shop please enter:</p>
-        
-        <label>Name</label>
-        <input type="text" placeholder ="Required"onChange={(e) => setName(e.target.value)}/>
-        <label>Last name</label>
-        <input type="text" placeholder ="Required" onChange={(e) => setLastname(e.target.value)} />
-        <label>Phone</label>
-        <input type="number" placeholder ="Required" onChange={(e) => setPhone(e.target.value)}/>
-        <label>E-mail</label>
-        <input type="text" placeholder ="Required" onChange={(e) => setEmail(e.target.value)} />
-        <label>Please, confirm your e-mail adress</label>
-        <input type="text" placeholder="e-mail adress" onChange={(e)=> setSecondEmail(e.target.value)}></input>
-        
+                    <div className="cartTotal">
+                        <p>Total: $ {getTotalPrice()}</p>
+                    </div>
 
-        <button onClick={createOrder} disabled={validate}>BUY</button>
-        
-    </div>
+                    <div className="cartForm">
+                        <p>To finish your shop please enter:</p>
+
+                        <label>Name</label>
+                        <input type="text" placeholder="Required" onChange={(e) => setName(e.target.value)} />
+                        <label>Last name</label>
+                        <input type="text" placeholder="Required" onChange={(e) => setLastname(e.target.value)} />
+                        <label>Phone</label>
+                        <input type="number" placeholder="Required" onChange={(e) => setPhone(e.target.value)} />
+                        <label>E-mail</label>
+                        <input type="text" placeholder="Required" onChange={(e) => setEmail(e.target.value)} />
+                        <label>Please, confirm your e-mail adress</label>
+                        <input type="text" placeholder="e-mail adress" onChange={(e) => setSecondEmail(e.target.value)}></input>
 
 
-</div>
-}
+                        <button onClick={createOrder} disabled={validate}>BUY</button>
+
+                    </div>
+
+
+                </div>
+            }
 
 
 
-</div>
-)
+        </div>
+    )
 }
 
 

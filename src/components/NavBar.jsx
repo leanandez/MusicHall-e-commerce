@@ -13,7 +13,7 @@ function NavBar() {
 
   return (
     <nav className="navBar">
-      <Link to="/"><div className="navBrand">MusicHall</div></Link>
+      <Link to="/MusicHall-e-commerce"><div className="navBrand">MusicHall</div></Link>
       <div className="navCategories">
         <Link to="/category/guitar">Guitars</Link>
         <Link to="/category/bass">Basses</Link>

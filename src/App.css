@@ -49,7 +49,7 @@
 
 
 .cartWidget {
-  color: whitesmoke;
+  color: black;
   font-size: 40px;
   padding-bottom: 10px;
 }
@@ -72,6 +72,8 @@
 }
 
 
+
+
 /* ItemDetailContainer */
 
 .itemDetailCointainer {
@@ -84,6 +86,7 @@
 .detailCard_title {
   text-align: center;
   font-size: 25px;
+  font-weight: bold;
   padding-top: 2rem;
 }
 
@@ -244,12 +247,23 @@ input[type=number]{
   height: 5em;
   width: 80vw;
   margin: 2em auto;
-  display: grid;
+  display: flex;
   grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   font-size: 20px;
   margin: 3rem 0;
 
+}
+
+.productTitle{
+  font-weight: bold;
+}
+
+.cartDetail{
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+  width: 100%;
 }
 
 .carCard .btn {
@@ -279,6 +293,9 @@ input[type=number]{
   font-family:'Noto Serif Oriya', serif;
 
 }
+
+
+
 .cartForm{
   display: flex;
   flex-direction: column;
@@ -331,4 +348,85 @@ a:-webkit-any-link {
   text-decoration: none;
   cursor: pointer;
   color: black;
+}
+
+
+@media (max-width:576px){
+  .navBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .navBrand{
+    margin: 0;
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+
+  .navCategories{
+    width: 100%;
+  }
+  .navCart{
+    margin-right: 0;
+  }
+
+
+  .detailCard_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+
+  }
+  .detailCard_info{
+    padding: 0;
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .detailCard_description{
+    width: 100%;
+  }
+
+  .detailCard_stock{
+    padding: 0;
+  }
+
+
+
+
+
+  .cartCard{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  .cartDetail{
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    width: 100%;
+  }
+
+  .elements{
+    text-align: center;
+  }
+
+  .cardImg{
+    height: auto;
+  }
+
+  .cartResume{
+    width: 100%;
+  }
 }
